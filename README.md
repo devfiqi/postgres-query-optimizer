@@ -1,8 +1,8 @@
 # PostgreSQL Query Optimizer
 
-Understanding database performance through hands-on query optimization.
+Understanding database performance through query optimization.
 
-## Learning Goals
+## Objectives
 
 - How B-tree indexes improve query performance
 - When to use indexes vs when they hurt performance
@@ -18,22 +18,10 @@ PostgreSQL uses B-trees for indexing, which provide O(log n) lookup vs O(n) sequ
 3. **Query rewriting** - JOIN instead of subquery
 4. **EXPLAIN ANALYZE** - Understanding query execution plans
 
-## Performance Results
-
-| Query | Before | After | Improvement | Technique |
-|-------|--------|-------|-------------|-----------|
-| User Orders | 245ms | 8ms | 30x | Single-column index |
-| High-Value Orders | 1200ms | 45ms | 27x | Composite index |
-| Product Sales | 2100ms | 180ms | 12x | Query rewrite + index |
-
 ## Resources
 
 **Designing Data-Intensive Applications** by Martin Kleppmann
 - Chapter 3: Storage and Retrieval (B-trees, LSM-trees, indexes)
-
-**PostgreSQL Documentation**
-- EXPLAIN and query planning
-- Index types and usage
 
 ## Running
 ```bash
